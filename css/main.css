@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #1a1a1a;
+	background: -webkit-radial-gradient(#222, #111);
+	background: radial-gradient(#222, #111);
+	font-family: 'Droid Sans Mono', monospace;
+	overflow: hidden;
+}
+
+canvas {
+	background: #000;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-filter: blur(10px) contrast(10);
+	-moz-filter: blur(10px) contrast(10);
+	filter: blur(10px) contrast(10);
+}
+
+.canvas-overlay {
+	background: -webkit-radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	bottom: 0;
+	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.15), 0 0 0 20px #000;
+	color: #fff;
+	font-size: 20px;
+	left: 0;
+	letter-spacing: -0.025em;
+	line-height: 1;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.score {
+	position: absolute;
+	top: 13px;
+}
+
+.score-hero {
+	left: 16px;
+}
+
+.score-comp {
+	right: 16px;
+}
+
+.gameover {
+	background: rgba(0, 0, 0, 0.75);
+	bottom: 0;
+	font-size: 30px;
+	left: 0;
+	line-height: 1.3;
+	opacity: 0;
+	padding: 250px 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transition: opacity 500ms;
+	top: 0;
+}
+
+.gameover-visible .gameover {
+	opacity: 1;
+	transition: opacity 1000ms;
+}
+
+.info {
+	color: rgba(255, 255, 255, 0.4);
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.info-top {	
+	top: -80px;
+}
+
+.info-bot {
+	bottom: -70px;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 12px;
+	line-height: 1;
+}
+
+h3 {
+	font-size: 12px;
+	line-height: 1.7;
+}
+
+h3 span {
+	color: #fff;
+}
+
+@media (max-width: 900px), (max-height: 770px) {
+	canvas,
+	.canvas-overlay {
+		-webkit-transform: scale(0.75);
+		-ms-transform: scale(0.75);
+		transform: scale(0.75);
+	}
+}
